@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.877);
+}
+
+body {
+    margin: 0;
+    background-color: #a4f7d4;
+    display: grid; 
+    place-items: center; 
+    min-height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px 5px rgba(121, 119, 119, 0.8), -1px -1px 14px 0px rgb(0 0 0 / 35%);
+    padding: 20px;
+    background-color: #761a1a;
+    max-width: 600px;
+    width: 100%;
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 30px;
+}
+
+#add-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#add-task {
+    width: 400px;
+}
+
+input {
+    border-radius: 10px;
+    border: 3px inset rgb(173, 230, 221);
+    padding: 7px;
+    outline: none;
+    cursor: pointer;
+    color: rgba(101, 101, 101, 0.988);
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+}
+
+button:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .5);
+}
+
+button:hover {
+    background-color: #65b694;
+    transform: translateY(-1px);
+}
+
+.action-button {
+    background-color: #51ac86;
+}
+
+.filtr-button:hover {
+    background: linear-gradient(to right,#51ac86, #7dc8a8);
+}
+
+.filtr-button {
+    padding: 10px 16px;
+    background: linear-gradient(to right,#51ac86, #70bf9e);
+}
+
+.containerList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task {
+    display: flex;
+    gap: 10px;
+    border: 2px inset rgba(173, 230, 221, 0.599);
+    padding: 7px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    transition: all 0.3s ease; 
+}
+
+.text-task-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 400px;
+}
+
+.text-task {
+    font-size: 12px;
+}
+
+.task-checkbox {
+    accent-color: #51ac86;
+    width: 15px;
+    height: 15px;
+}
+
+.img-task-area {
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.2s; 
+}
+
+.img-task-area:active {
+    transform: translateY(-1px);
+}
+
+.img-task {
+    width: 35px;
+}
+
+#filter {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.text-task.completed {
+    text-decoration: line-through; 
+    color: #aaaaaa; 
+}
+
+.img-task-area.hidden {
+    visibility: hidden; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+
+.img-task-area.visible {
+    visibility: visible;
+    opacity: 1; 
+}
+
+.filtr-button.active {
+    opacity: 0.5;
+    pointer-events: none; 
+}
